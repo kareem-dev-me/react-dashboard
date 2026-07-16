@@ -208,5 +208,41 @@
       "beauty": "جمال",
       "books": "كتب"
     }
+  },
+  "users": {
+    "kpis": {
+      "total": "إجمالي المستخدمين",
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "searchPlaceholder": "ابحث بالاسم أو البريد…",
+    "addUser": "إضافة مستخدم",
+    "table": {
+      "name": "الاسم",
+      "email": "البريد",
+      "role": "الدور",
+      "status": "الحالة",
+      "joined": "تاريخ الانضمام"
+    },
+    "roles": {
+      "admin": "مدير النظام",
+      "manager": "مدير",
+      "staff": "موظف"
+    },
+    "status": {
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "empty": "لا يوجد مستخدمون يطابقون البحث.",
+    "dialog": {
+      "title": "إضافة مستخدم",
+      "name": "الاسم",
+      "email": "البريد",
+      "role": "الدور",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "nameRequired": "الاسم مطلوب.",
+      "emailRequired": "البريد مطلوب."
+    }
   }
 }

@@ -208,5 +208,41 @@
       "beauty": "Beauty",
       "books": "Books"
     }
+  },
+  "users": {
+    "kpis": {
+      "total": "Total users",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "searchPlaceholder": "Search by name or email…",
+    "addUser": "Add user",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "joined": "Joined"
+    },
+    "roles": {
+      "admin": "Admin",
+      "manager": "Manager",
+      "staff": "Staff"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "empty": "No users match your search.",
+    "dialog": {
+      "title": "Add user",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "cancel": "Cancel",
+      "save": "Save",
+      "nameRequired": "Name is required.",
+      "emailRequired": "Email is required."
+    }
   }
 }
