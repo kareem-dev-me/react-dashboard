@@ -137,5 +137,34 @@
       "nameRequired": "الاسم مطلوب.",
       "emailRequired": "البريد مطلوب."
     }
+  },
+  "categories": {
+    "kpis": {
+      "total": "إجمالي التصنيفات",
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "searchPlaceholder": "ابحث بالاسم أو الوصف…",
+    "addCategory": "إضافة تصنيف",
+    "table": {
+      "name": "الاسم",
+      "description": "الوصف",
+      "products": "المنتجات",
+      "status": "الحالة",
+      "created": "تاريخ الإنشاء"
+    },
+    "status": {
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "empty": "لا توجد تصنيفات تطابق البحث.",
+    "dialog": {
+      "title": "إضافة تصنيف",
+      "name": "الاسم",
+      "description": "الوصف",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "nameRequired": "الاسم مطلوب."
+    }
   }
 }

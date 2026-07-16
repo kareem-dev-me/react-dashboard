@@ -137,5 +137,34 @@
       "nameRequired": "Name is required.",
       "emailRequired": "Email is required."
     }
+  },
+  "categories": {
+    "kpis": {
+      "total": "Total categories",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "searchPlaceholder": "Search by name or description…",
+    "addCategory": "Add category",
+    "table": {
+      "name": "Name",
+      "description": "Description",
+      "products": "Products",
+      "status": "Status",
+      "created": "Created"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "empty": "No categories match your search.",
+    "dialog": {
+      "title": "Add category",
+      "name": "Name",
+      "description": "Description",
+      "cancel": "Cancel",
+      "save": "Save",
+      "nameRequired": "Name is required."
+    }
   }
 }
