@@ -263,5 +263,20 @@
     "save": "Save changes",
     "reset": "Reset",
     "savedMessage": "Settings saved successfully."
+  },
+  "profile": {
+    "role": "Role",
+    "memberSince": "Member since",
+    "lastLogin": "Last login",
+    "personalInfo": "Personal information",
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "jobTitle": "Job title",
+    "save": "Save changes",
+    "reset": "Reset",
+    "savedMessage": "Profile saved successfully.",
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email is required."
   }
 }

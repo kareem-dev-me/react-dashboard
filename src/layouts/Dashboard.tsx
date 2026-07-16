@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, Outlet, Link, useLocation, useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
-import { LogOut } from "lucide-react";
+import { LogOut, Menu } from "lucide-react";
 
 const primaryNav = [
   { to: "/dashboard/home", labelKey: "nav.home" },
@@ -31,9 +31,7 @@ const pageTitleKeys: Record<string, string> = {
 function navClassName({ isActive }: { isActive: boolean }) {
   return [
     "block rounded-lg px-3 py-2 text-start text-sm font-medium transition-colors",
-    isActive
-      ? "bg-primary/15 text-primary-fg"
-      : "text-muted hover:bg-white/5 hover:text-white",
+    isActive ? "bg-primary/15 text-primary-fg" : "text-muted hover:bg-white/5 hover:text-white",
   ].join(" ");
 }
 
@@ -111,41 +109,22 @@ const Dashboard: React.FC = () => {
             <button
               type="button"
               aria-label={t("actions.openSidebar")}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-muted transition-colors hover:bg-surface lg:hidden"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-muted transition-colors hover:bg-surface lg:hidden cursor-pointer"
               onClick={() => setSidebarOpen(true)}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="h-5 w-5"
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
-              </svg>
+              <Menu className="h-5 w-5" />
             </button>
             <h1 className="text-base font-semibold tracking-tight text-ink">{title}</h1>
           </div>
 
           <div className="flex items-center gap-2">
-            <Link
-              to="/dashboard/profile"
-              className="rounded-lg px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-ink"
-            >
-              {t("actions.profile")}
-            </Link>
-
             <div className="flex items-center rounded-lg border border-border bg-surface p-0.5 text-xs font-semibold">
               <button
                 type="button"
                 onClick={() => void i18n.changeLanguage("en")}
                 className={[
                   "rounded-md px-2.5 py-1.5 transition-colors",
-                  currentLanguage === "en"
-                    ? "bg-surface-card text-ink shadow-sm"
-                    : "text-muted hover:text-ink",
+                  currentLanguage === "en" ? "bg-surface-card text-ink shadow-sm" : "text-muted hover:text-ink",
                 ].join(" ")}
               >
                 {t("language.en")}
@@ -155,9 +134,7 @@ const Dashboard: React.FC = () => {
                 onClick={() => void i18n.changeLanguage("ar")}
                 className={[
                   "rounded-md px-2.5 py-1.5 transition-colors",
-                  currentLanguage === "ar"
-                    ? "bg-surface-card text-ink shadow-sm"
-                    : "text-muted hover:text-ink",
+                  currentLanguage === "ar" ? "bg-surface-card text-ink shadow-sm" : "text-muted hover:text-ink",
                 ].join(" ")}
               >
                 {t("language.ar")}
