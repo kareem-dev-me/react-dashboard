@@ -1,13 +1,19 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
+import { useAuth } from "../store/AuthContext";
 
 const Login: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { login, isAuthenticated } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
+
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard/home" replace />;
+  }
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -22,6 +28,7 @@ const Login: React.FC = () => {
     }
 
     setErrors({});
+    login(email.trim());
     navigate("/dashboard/home");
   };
 

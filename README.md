@@ -8,7 +8,8 @@ A modern admin dashboard built with React, TypeScript, and Tailwind CSS. It incl
 - **CRUD-style list pages** — Orders, Clients, Categories, Products, and Users with search, filters, and status badges
 - **Add dialogs** — Reusable modal for creating clients, categories, products, and users
 - **Settings & profile** — Preference toggles, language control, and editable profile form
-- **Authentication shell** — Login page with mock sign-in (redirects to dashboard; no backend auth)
+- **Auth context** — React Context store with `localStorage` persistence; login/logout updates shared auth state
+- **Protected routes** — All `/dashboard/*` pages require authentication; guests are redirected to `/`
 - **i18n** — English and Arabic via `i18next`, with `dir` and `lang` switching for RTL
 - **Theme** — Semantic color tokens (`primary`, `surface`, `ink`, etc.) defined in Tailwind v4 `@theme`
 
@@ -43,7 +44,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) to sign in. Any email and password will redirect to the dashboard.
+Open [http://localhost:5173](http://localhost:5173) to sign in. Any email and password will authenticate (mock auth) and redirect to the dashboard. Session persists in `localStorage` under the key `auth`.
 
 ### Build
 
@@ -67,28 +68,40 @@ npm run lint
 
 | Path | Description |
 |------|-------------|
-| `/` | Login page |
-| `/dashboard/home` | Overview with charts and KPIs |
-| `/dashboard/orders` | Orders list with status filters |
-| `/dashboard/clients` | Clients list + add dialog |
-| `/dashboard/categories` | Categories list + add dialog |
-| `/dashboard/products` | Products list + add dialog |
-| `/dashboard/users` | Users list + add dialog |
-| `/dashboard/settings` | General and notification preferences |
-| `/dashboard/profile` | User profile summary and edit form |
+| `/` | Login page (redirects to dashboard if already signed in) |
+| `/dashboard/home` | Overview with charts and KPIs (protected) |
+| `/dashboard/orders` | Orders list with status filters (protected) |
+| `/dashboard/clients` | Clients list + add dialog (protected) |
+| `/dashboard/categories` | Categories list + add dialog (protected) |
+| `/dashboard/products` | Products list + add dialog (protected) |
+| `/dashboard/users` | Users list + add dialog (protected) |
+| `/dashboard/settings` | General and notification preferences (protected) |
+| `/dashboard/profile` | User profile summary and edit form (protected) |
 
 ## Project Structure
 
 ```
 src/
-├── components/       # Shared UI (Dialog, Toggle)
+├── components/     # Shared UI (Dialog, Toggle, ProtectedRoute)
 ├── layouts/        # Auth and Dashboard shells
 ├── pages/          # Route pages
+├── store/          # AuthContext (auth state + login/logout)
 ├── languages/      # en.json, ar.json translation files
 ├── i18n.ts         # i18next configuration
 ├── index.css       # Tailwind + theme tokens
-└── main.tsx        # Router setup
+└── main.tsx        # Router setup + AuthProvider
 ```
+
+## Authentication
+
+Auth is managed by `src/store/AuthContext.tsx`:
+
+- `login(email)` stores `{ email }` in context and `localStorage`
+- `logout()` clears both
+- `ProtectedRoute` blocks unauthenticated access to `/dashboard/*`
+- Logged-in users visiting `/` are redirected to `/dashboard/home`
+
+There is no backend or password verification — this is mock client-side auth for learning/demo purposes.
 
 ## Internationalization
 
@@ -96,5 +109,5 @@ Language files live in `src/languages/`. The selected language is stored in `loc
 
 ## Notes
 
-- All data is mock/local state — there is no API or persistence layer.
-- Login and logout are UI-only; no real authentication is implemented.
+- Page data (orders, clients, products, etc.) is mock/local state — there is no API.
+- Auth is mock React Context + `localStorage`; not suitable for production security.

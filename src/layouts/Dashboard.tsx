@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Outlet, Link, useLocation, useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
 import { LogOut, Menu } from "lucide-react";
+import { useAuth } from "../store/AuthContext";
 
 const primaryNav = [
   { to: "/dashboard/home", labelKey: "nav.home" },
@@ -37,6 +38,7 @@ function navClassName({ isActive }: { isActive: boolean }) {
 
 const Dashboard: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const { logout } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -48,6 +50,7 @@ const Dashboard: React.FC = () => {
 
   const handleLogout = () => {
     closeSidebar();
+    logout();
     navigate("/");
   };
 
