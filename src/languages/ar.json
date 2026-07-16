@@ -104,5 +104,38 @@
       "cancelled": "ملغى"
     },
     "empty": "لا توجد طلبات تطابق عوامل التصفية."
+  },
+  "clients": {
+    "kpis": {
+      "total": "إجمالي العملاء",
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "searchPlaceholder": "ابحث بالاسم أو البريد…",
+    "addClient": "إضافة عميل",
+    "table": {
+      "name": "الاسم",
+      "email": "البريد",
+      "phone": "الهاتف",
+      "company": "الشركة",
+      "status": "الحالة",
+      "joined": "تاريخ الانضمام"
+    },
+    "status": {
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "empty": "لا يوجد عملاء يطابقون البحث.",
+    "dialog": {
+      "title": "إضافة عميل",
+      "name": "الاسم",
+      "email": "البريد",
+      "phone": "الهاتف",
+      "company": "الشركة",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "nameRequired": "الاسم مطلوب.",
+      "emailRequired": "البريد مطلوب."
+    }
   }
 }

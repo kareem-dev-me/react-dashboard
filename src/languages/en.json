@@ -104,5 +104,38 @@
       "cancelled": "Cancelled"
     },
     "empty": "No orders match your filters."
+  },
+  "clients": {
+    "kpis": {
+      "total": "Total clients",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "searchPlaceholder": "Search by name or email…",
+    "addClient": "Add client",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "status": "Status",
+      "joined": "Joined"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "empty": "No clients match your search.",
+    "dialog": {
+      "title": "Add client",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "cancel": "Cancel",
+      "save": "Save",
+      "nameRequired": "Name is required.",
+      "emailRequired": "Email is required."
+    }
   }
 }
