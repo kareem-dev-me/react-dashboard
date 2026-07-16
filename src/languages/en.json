@@ -22,5 +22,60 @@
   "language": {
     "en": "EN",
     "ar": "AR"
+  },
+  "home": {
+    "kpis": {
+      "revenue": "Revenue",
+      "orders": "Orders",
+      "clients": "Clients",
+      "products": "Products",
+      "revenueChange": "+12.5% from last month",
+      "ordersChange": "+8.2% from last week",
+      "clientsChange": "+3.1% from last month",
+      "productsChange": "+5.4% from last month"
+    },
+    "charts": {
+      "revenueTitle": "Revenue trend",
+      "ordersTitle": "Orders by day",
+      "categoriesTitle": "Sales by category",
+      "revenue": "Revenue",
+      "orders": "Orders"
+    },
+    "months": {
+      "jan": "Jan",
+      "feb": "Feb",
+      "mar": "Mar",
+      "apr": "Apr",
+      "may": "May",
+      "jun": "Jun"
+    },
+    "days": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "categories": {
+      "electronics": "Electronics",
+      "clothing": "Clothing",
+      "home": "Home",
+      "sports": "Sports"
+    },
+    "activity": {
+      "title": "Recent activity",
+      "item1": "New order #1042 placed",
+      "item2": "Client Sarah joined",
+      "item3": "Product \"Nova Watch\" updated",
+      "item4": "Category \"Sports\" created",
+      "item5": "Order #1038 marked delivered",
+      "time1": "2 min ago",
+      "time2": "18 min ago",
+      "time3": "1 hour ago",
+      "time4": "3 hours ago",
+      "time5": "Yesterday"
+    }
   }
 }
