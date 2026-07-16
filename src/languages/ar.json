@@ -166,5 +166,47 @@
       "save": "حفظ",
       "nameRequired": "الاسم مطلوب."
     }
+  },
+  "products": {
+    "kpis": {
+      "total": "إجمالي المنتجات",
+      "inStock": "متوفر",
+      "lowStock": "مخزون منخفض",
+      "outOfStock": "غير متوفر"
+    },
+    "searchPlaceholder": "ابحث بالاسم أو التصنيف…",
+    "addProduct": "إضافة منتج",
+    "table": {
+      "name": "الاسم",
+      "category": "التصنيف",
+      "price": "السعر",
+      "stock": "المخزون",
+      "status": "الحالة"
+    },
+    "status": {
+      "in_stock": "متوفر",
+      "low_stock": "مخزون منخفض",
+      "out_of_stock": "غير متوفر"
+    },
+    "empty": "لا توجد منتجات تطابق البحث.",
+    "dialog": {
+      "title": "إضافة منتج",
+      "name": "الاسم",
+      "category": "التصنيف",
+      "price": "السعر",
+      "stock": "المخزون",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "nameRequired": "الاسم مطلوب.",
+      "priceRequired": "السعر مطلوب."
+    },
+    "categories": {
+      "electronics": "إلكترونيات",
+      "clothing": "ملابس",
+      "home": "منزل",
+      "sports": "رياضة",
+      "beauty": "جمال",
+      "books": "كتب"
+    }
   }
 }

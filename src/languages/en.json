@@ -166,5 +166,47 @@
       "save": "Save",
       "nameRequired": "Name is required."
     }
+  },
+  "products": {
+    "kpis": {
+      "total": "Total products",
+      "inStock": "In stock",
+      "lowStock": "Low stock",
+      "outOfStock": "Out of stock"
+    },
+    "searchPlaceholder": "Search by name or category…",
+    "addProduct": "Add product",
+    "table": {
+      "name": "Name",
+      "category": "Category",
+      "price": "Price",
+      "stock": "Stock",
+      "status": "Status"
+    },
+    "status": {
+      "in_stock": "In stock",
+      "low_stock": "Low stock",
+      "out_of_stock": "Out of stock"
+    },
+    "empty": "No products match your search.",
+    "dialog": {
+      "title": "Add product",
+      "name": "Name",
+      "category": "Category",
+      "price": "Price",
+      "stock": "Stock",
+      "cancel": "Cancel",
+      "save": "Save",
+      "nameRequired": "Name is required.",
+      "priceRequired": "Price is required."
+    },
+    "categories": {
+      "electronics": "Electronics",
+      "clothing": "Clothing",
+      "home": "Home",
+      "sports": "Sports",
+      "beauty": "Beauty",
+      "books": "Books"
+    }
   }
 }
