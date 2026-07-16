@@ -278,5 +278,14 @@
     "savedMessage": "Profile saved successfully.",
     "nameRequired": "Name is required.",
     "emailRequired": "Email is required."
+  },
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Enter your credentials to access the dashboard.",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "emailRequired": "Email is required.",
+    "passwordRequired": "Password is required."
   }
 }

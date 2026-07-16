@@ -278,5 +278,14 @@
     "savedMessage": "تم حفظ الملف الشخصي بنجاح.",
     "nameRequired": "الاسم مطلوب.",
     "emailRequired": "البريد مطلوب."
+  },
+  "login": {
+    "title": "تسجيل الدخول",
+    "subtitle": "أدخل بياناتك للوصول إلى لوحة التحكم.",
+    "email": "البريد",
+    "password": "كلمة المرور",
+    "submit": "تسجيل الدخول",
+    "emailRequired": "البريد مطلوب.",
+    "passwordRequired": "كلمة المرور مطلوبة."
   }
 }

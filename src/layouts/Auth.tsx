@@ -1,7 +1,9 @@
+import { Outlet } from "react-router";
+
 const Auth: React.FC = () => {
   return (
-    <div>
-      <h1>Auth</h1>
+    <div className="flex min-h-screen items-center justify-center bg-surface px-4 py-8 text-ink">
+      <Outlet />
     </div>
   );
 };
