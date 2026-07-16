@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
 
   const handleLogout = () => {
     closeSidebar();
-    navigate("/login");
+    navigate("/");
   };
 
   return (

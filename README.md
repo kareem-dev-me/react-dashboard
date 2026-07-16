@@ -1,75 +1,100 @@
-# React + TypeScript + Vite
+# React Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern admin dashboard built with React, TypeScript, and Tailwind CSS. It includes a login flow, a responsive sidebar layout, data tables with search and filters, charts, settings, and full English/Arabic internationalization with RTL support.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Dashboard overview** — KPI cards, revenue/orders charts, category breakdown, and recent activity
+- **CRUD-style list pages** — Orders, Clients, Categories, Products, and Users with search, filters, and status badges
+- **Add dialogs** — Reusable modal for creating clients, categories, products, and users
+- **Settings & profile** — Preference toggles, language control, and editable profile form
+- **Authentication shell** — Login page with mock sign-in (redirects to dashboard; no backend auth)
+- **i18n** — English and Arabic via `i18next`, with `dir` and `lang` switching for RTL
+- **Theme** — Semantic color tokens (`primary`, `surface`, `ink`, etc.) defined in Tailwind v4 `@theme`
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Category | Tools |
+|----------|-------|
+| Framework | React 19, TypeScript |
+| Build | Vite 8 |
+| Styling | Tailwind CSS v4 |
+| Routing | React Router 7 |
+| Charts | Recharts |
+| i18n | i18next, react-i18next |
+| Icons | lucide-react |
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 18+
+- npm
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Open [http://localhost:5173](http://localhost:5173) to sign in. Any email and password will redirect to the dashboard.
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Routes
+
+| Path | Description |
+|------|-------------|
+| `/` | Login page |
+| `/dashboard/home` | Overview with charts and KPIs |
+| `/dashboard/orders` | Orders list with status filters |
+| `/dashboard/clients` | Clients list + add dialog |
+| `/dashboard/categories` | Categories list + add dialog |
+| `/dashboard/products` | Products list + add dialog |
+| `/dashboard/users` | Users list + add dialog |
+| `/dashboard/settings` | General and notification preferences |
+| `/dashboard/profile` | User profile summary and edit form |
+
+## Project Structure
 
 ```
+src/
+├── components/       # Shared UI (Dialog, Toggle)
+├── layouts/        # Auth and Dashboard shells
+├── pages/          # Route pages
+├── languages/      # en.json, ar.json translation files
+├── i18n.ts         # i18next configuration
+├── index.css       # Tailwind + theme tokens
+└── main.tsx        # Router setup
+```
+
+## Internationalization
+
+Language files live in `src/languages/`. The selected language is stored in `localStorage` under the key `lang`. Switch language from the dashboard header or the Settings page.
+
+## Notes
+
+- All data is mock/local state — there is no API or persistence layer.
+- Login and logout are UI-only; no real authentication is implemented.
