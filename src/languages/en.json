@@ -1,0 +1,26 @@
+{
+  "brand": "Dashboard",
+  "nav": {
+    "home": "Home",
+    "orders": "Orders",
+    "clients": "Clients",
+    "categories": "Categories",
+    "products": "Products",
+    "users": "Users",
+    "settings": "Settings",
+    "profile": "Profile"
+  },
+  "actions": {
+    "logout": "Logout",
+    "profile": "Profile",
+    "openSidebar": "Open sidebar",
+    "closeSidebar": "Close sidebar"
+  },
+  "pages": {
+    "overview": "Overview"
+  },
+  "language": {
+    "en": "EN",
+    "ar": "AR"
+  }
+}

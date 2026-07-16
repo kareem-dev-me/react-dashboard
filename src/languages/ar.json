@@ -1,0 +1,26 @@
+{
+  "brand": "لوحة التحكم",
+  "nav": {
+    "home": "الرئيسية",
+    "orders": "الطلبات",
+    "clients": "العملاء",
+    "categories": "التصنيفات",
+    "products": "المنتجات",
+    "users": "المستخدمون",
+    "settings": "الإعدادات",
+    "profile": "الملف الشخصي"
+  },
+  "actions": {
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي",
+    "openSidebar": "فتح القائمة",
+    "closeSidebar": "إغلاق القائمة"
+  },
+  "pages": {
+    "overview": "نظرة عامة"
+  },
+  "language": {
+    "en": "EN",
+    "ar": "AR"
+  }
+}
