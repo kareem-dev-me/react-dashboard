@@ -77,5 +77,32 @@
       "time4": "3 hours ago",
       "time5": "Yesterday"
     }
+  },
+  "orders": {
+    "kpis": {
+      "total": "Total orders",
+      "pending": "Pending",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    },
+    "searchPlaceholder": "Search by order ID or client…",
+    "filters": {
+      "all": "All"
+    },
+    "table": {
+      "id": "Order ID",
+      "client": "Client",
+      "date": "Date",
+      "items": "Items",
+      "total": "Total",
+      "status": "Status"
+    },
+    "status": {
+      "pending": "Pending",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "empty": "No orders match your filters."
   }
 }
