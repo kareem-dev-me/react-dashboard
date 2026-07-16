@@ -1,32 +1,20 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import "./i18n";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import Home from "./pages/Home.tsx";
-import Dashboard from "./layouts/Dashboard.tsx";
-import Orders from "./pages/Orders.tsx";
-import Clients from "./pages/Clients.tsx";
-import Products from "./pages/Products.tsx";
-import Login from "./pages/Login.tsx";
-import Auth from "./layouts/Auth.tsx";
-import Users from "./pages/Users.tsx";
-import Settings from "./pages/Settings.tsx";
-import Profile from "./pages/Profile.tsx";
-import NotFound from "./pages/404.tsx";
-import Categories from "./pages/Categories.tsx";
 import ProtectedRoute from "./components/ProtectedRoute.tsx";
 import { AuthProvider } from "./store/AuthContext.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: Auth,
+    lazy: () => import("./layouts/Auth.tsx").then((m) => ({ Component: m.default })),
     children: [
       {
         path: "",
-        Component: Login,
+        lazy: () => import("./pages/Login.tsx").then((m) => ({ Component: m.default })),
       },
     ],
   },
@@ -36,39 +24,39 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        Component: Dashboard,
+        lazy: () => import("./layouts/Dashboard.tsx").then((m) => ({ Component: m.default })),
         children: [
           {
             path: "home",
-            Component: Home,
+            lazy: () => import("./pages/Home.tsx").then((m) => ({ Component: m.default })),
           },
           {
             path: "orders",
-            Component: Orders,
+            lazy: () => import("./pages/Orders.tsx").then((m) => ({ Component: m.default })),
           },
           {
             path: "clients",
-            Component: Clients,
+            lazy: () => import("./pages/Clients.tsx").then((m) => ({ Component: m.default })),
           },
           {
             path: "categories",
-            Component: Categories,
+            lazy: () => import("./pages/Categories.tsx").then((m) => ({ Component: m.default })),
           },
           {
             path: "products",
-            Component: Products,
+            lazy: () => import("./pages/Products.tsx").then((m) => ({ Component: m.default })),
           },
           {
             path: "users",
-            Component: Users,
+            lazy: () => import("./pages/Users.tsx").then((m) => ({ Component: m.default })),
           },
           {
             path: "settings",
-            Component: Settings,
+            lazy: () => import("./pages/Settings.tsx").then((m) => ({ Component: m.default })),
           },
           {
             path: "profile",
-            Component: Profile,
+            lazy: () => import("./pages/Profile.tsx").then((m) => ({ Component: m.default })),
           },
         ],
       },
@@ -76,14 +64,22 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    Component: NotFound,
+    lazy: () => import("./pages/404.tsx").then((m) => ({ Component: m.default })),
   },
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <Suspense
+        fallback={
+          <div className="flex min-h-screen items-center justify-center bg-surface text-sm text-muted">
+            Loading…
+          </div>
+        }
+      >
+        <RouterProvider router={router} />
+      </Suspense>
     </AuthProvider>
   </StrictMode>
 );

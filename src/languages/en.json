@@ -287,5 +287,13 @@
     "submit": "Sign in",
     "emailRequired": "Email is required.",
     "passwordRequired": "Password is required."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "returnDashboard": "Back to dashboard",
+    "returnLogin": "Back to login",
+    "goBack": "Go back"
   }
 }
