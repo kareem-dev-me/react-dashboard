@@ -244,5 +244,24 @@
       "nameRequired": "الاسم مطلوب.",
       "emailRequired": "البريد مطلوب."
     }
+  },
+  "settings": {
+    "general": {
+      "title": "عام",
+      "language": "اللغة",
+      "companyName": "اسم الشركة"
+    },
+    "notifications": {
+      "title": "الإشعارات",
+      "orderUpdates": "تحديثات الطلبات",
+      "orderUpdatesHint": "احصل على إشعار عند تغيير حالة الطلب.",
+      "marketingEmails": "رسائل تسويقية",
+      "marketingEmailsHint": "استقبل أخبار المنتجات والعروض.",
+      "pushAlerts": "تنبيهات فورية",
+      "pushAlertsHint": "اعرض إشعارات المتصفح للأحداث المهمة."
+    },
+    "save": "حفظ التغييرات",
+    "reset": "إعادة تعيين",
+    "savedMessage": "تم حفظ الإعدادات بنجاح."
   }
 }

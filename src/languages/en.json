@@ -244,5 +244,24 @@
       "nameRequired": "Name is required.",
       "emailRequired": "Email is required."
     }
+  },
+  "settings": {
+    "general": {
+      "title": "General",
+      "language": "Language",
+      "companyName": "Company name"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "orderUpdates": "Order updates",
+      "orderUpdatesHint": "Get notified when order status changes.",
+      "marketingEmails": "Marketing emails",
+      "marketingEmailsHint": "Receive product news and promotions.",
+      "pushAlerts": "Push alerts",
+      "pushAlertsHint": "Show browser notifications for important events."
+    },
+    "save": "Save changes",
+    "reset": "Reset",
+    "savedMessage": "Settings saved successfully."
   }
 }
